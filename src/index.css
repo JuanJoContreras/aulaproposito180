@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html, body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background: #FAFAFA;
+  color: #1A1A1A;
+}
+
+.scrollbar-none::-webkit-scrollbar { display: none; }
+.scrollbar-none { scrollbar-width: none; }
+
+.clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.clamp-1 { display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden; }
+
+.stripe-bg {
+  background-image: repeating-linear-gradient(135deg, rgba(27,58,92,0.06) 0 2px, transparent 2px 14px),
+    linear-gradient(135deg, #E8EEF5 0%, #DDE6F0 100%);
+}
+.stripe-gold {
+  background-image: repeating-linear-gradient(135deg, rgba(201,162,39,0.18) 0 2px, transparent 2px 12px),
+    linear-gradient(135deg, #FBF6E3 0%, #F4E8B6 100%);
+}
+.stripe-navy {
+  background-image: repeating-linear-gradient(135deg, rgba(255,255,255,0.06) 0 2px, transparent 2px 14px),
+    linear-gradient(135deg, #1B3A5C 0%, #0E1F31 100%);
+}
+
+.ring-soft { box-shadow: inset 0 0 0 1px rgba(16,24,40,0.06); }
+
+.card-hover .preview { opacity: 0; transform: translateY(4px); transition: all .18s ease; }
+.card-hover:hover .preview { opacity: 1; transform: translateY(0); }
